@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "fastapi-tutorial"
+version = "0.1.0"
+description = ""
+authors = ["Chayut Ruksomya <chayut.r@bluepi.co.th>"]
+packages = [{ include = "*" }]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+fastapi = "^0.63.0"
+uvicorn = {extras = ["standard"], version = "^0.13.3"}
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2"
+pytest-cov = "^2.10.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+dev = "script:dev"
+test = "script:test"
+test-cov = "script:test_with_coverage"
